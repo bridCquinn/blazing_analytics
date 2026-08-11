@@ -1,0 +1,17 @@
+services:
+  backblaze_db:
+    image: postgres:15-alpine
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    container_name: backblaze_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: securepassword
+      POSTGRES_DB: backblaze
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

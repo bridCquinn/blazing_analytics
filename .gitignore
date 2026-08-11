@@ -1,0 +1,35 @@
+# Go binaries, plugins, and test outputs
+/bin/
+/obj/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.prof
+
+# Go workspace files (if using multi-module workspaces locally)
+go.work
+go.work.sum
+
+# Visual Studio Code workspace/user settings and debug files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Operating System generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local dataset folders and large CSV files
+csv_files/
+*.csv
